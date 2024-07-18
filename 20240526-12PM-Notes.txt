@@ -1,0 +1,138 @@
+Github 
+
+1. how to create the account
+2. how to create repository
+3. how to clone the repository to my local system
+4. how to changes in our repository
+
+***********************************************************************************
+
+Project ==>
+	X perons
+	Y person
+	Z perons 
+	
+For all these 3 people they will have access on same git hub repository 
+
+entire project --> github account ==> single repository
+
+X,Y,Z ==> code changes ==> all these members will upload code into same repository
+
+Git repository ==>
+	branches
+	
+main/master branch ==> in general in real time projects all our latest code we can able to see in master or main branch.
+
+Repo ==> a.txt,b.txt ==> Jan 1st 
+
+x ==> cloned this repo on Jan 1st ==> local system ==> loca folder ==> a.txt,b.txt
+
+Jan 2nd ==> Y ==> he upload c.txt into repository ==> 
+
+Jan 2nd ==> x person what he need to do ==> latest changes ==> git pull
+
+
+step1: clone operation
+step2: pull operation
+
+*********************************************************************
+main/master branch ==> a.txt,b.txt,c.txt [latest code]
+
+Y person ==> he want to do chanbes in a.txt file ==> now whether he will do these changes directly in master branch or do he need to perfrom any opertations ==> 
+
+Y ==. clone ==> (a,b,c) ==> required modification on a.txt file ==> add ==> commit ==> push 
+by mistake or intentionally Y person did some mistake ==> 
+
+
+wrong code ==> jobs will start failing in real time projects ==. to over come this kind of issue in real time we need to follow a process ==> 
+
+Think from Y person perspective
+
+Done - 1. create separate branch in github ==> y_branch (from which branch he need to get all the previous code - master branch) ==> y_branch from master branch 
+y_branch ==> (a.txt,b.txt,c.txt) 
+
+done - 2. in our local system --> gitbash shell ==> we are working on which branch ==> main branch 
+how we can able to get y_branch in to our local system ==> git pull
+
+to see all the list of the branches ==> git branch -a
+main
+y_branch
+
+in which branch I am working ==> git branch 
+*main
+
+done - 3. We need swith from one branch to other branch (main branch to y_branc)
+git checkout y_branch 
+
+
+4. I will do some changes on existing file a.txt and I will add new files d.txt 
+
+5. git status
+
+6. git add *.*
+
+7. git commit -m "message"
+
+8. git push [y_branch]
+
+*************************************************************************************
+9. We need to move all the changes from y_branch to main branch 
+
+how to use this code ==> drop.sql/customer_lo.sql [branch] ==> you want to use all these kind of files ==> clone 
+
+spark-sql -f gs://srinivas-123/drop.sql 
+
+step1: as a developer whatever changes I am doing I will upload all the changes into my branch / you will upload all the scripts into GCS bucket also 
+
+Now I want to do the changes in my script file ==> from where we need to get he file to do the changes ==> repository ==> in script you need to changes then we need to push this change to reposiotry and we need to upload latest script into our GCS bucket also 
+
+
+step1: clone repo ==> all the files ==> gsutil cp ==> you can copy the files to your gcs buckets 
+
+srinivas branch ==> I am having my new changes ==> latest code into main branch ==> from srnivas branch I need to merge my code to main branch ==> but beore doing operations in real time projects your team lead and your team membmers are going to review your code ==> 
+
+
+Team lead ==> x
+Senior Team member ==> Y
+
+How X,Y can able to understand they need to review the code of srinivas branch ==> 
+
+
+0. raise a pull request ==> 
+	a) by using this pull request you are going to merge the code to main branch
+	b) while perfroming operations a, your request will go to your team lead ==> then TL will do review and he will give comments ==> 
+	c) merge the code 
+
+***********************************************************************
+
+Github ==> code management tool [regularly]
+Github ==> where we are going to maintain our latest code ==> main branch 
+how we can able to get all the code into my local system from repo ==> git clone 
+I want to see the existing branches ==> git branch -a 
+I want to switch from one branch to other branch in my system ==> git checkout branch name
+I want to see all the changes ==> git status
+I want to push changes to temp location/stage location ==> git add *.* / git add .
+I want to finalize my changes ==> git commit -m ""
+I want to push my changes to repo ==> git push
+I want to merge my code from my branch to main branch ==> create a pull request from console ==> TL will do review ==> based on comments we need to merge operations
+
+*********************************************************************************
+
+whatever the scripts you pprepared / whatever pythons scripts / what sql queries you practicies ==> try to upload all those files into github 
+
+In github are we going to maintain our data related files ==> ??? [NO]
+
+Source team ==> ODS ==> unix servers/drive/gcs buckets/sharepoints 
+
+
+*********************************************************************************
+
+
+
+
+
+
+
+
+
+
